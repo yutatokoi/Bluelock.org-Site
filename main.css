@@ -77,7 +77,8 @@ a:active {
     margin-bottom: auto;
 }
 
-.nav .right li a {
+.right li a,
+.left .navtitle a {
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -118,6 +119,10 @@ a:active {
 .right {
     float: right;
     height: 100%;
+}
+
+.container {
+    text-align: center;
 }
 
 .socials img {
