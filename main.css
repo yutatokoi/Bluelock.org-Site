@@ -52,10 +52,17 @@ a:active {
 }
 
 .nav {
+    position: fixed;
     width: 100%;
     display: block;
+    height: 100px;
+    z-index: 99;
+    transition: 0.4s;
+}
+
+.small {
     height: 74px;
-    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav .hamburger {
@@ -83,10 +90,21 @@ a:active {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.4s;
+}
+
+.small .right li a,
+.small .left .navtitle a {
+    padding: 10px 11px;
+}
+
+.navtitle {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .left img {
-    height: 74px;
+    height: 100%;
 }
 
 @keyframes slideIn {
@@ -104,21 +122,42 @@ a:active {
 
 .left a {
     color: #0052ff;
-    font-size: 36px;
+    font-size: 46px;
     font-family: Comfortaa-Bold;
+}
+
+.small .left a {
+    font-size: 36px;
 }
 
 .left {
     float: left;
+    height: 100%;
 }
 
 .right a {
     font-size: 30px;
 }
 
+.small .right a {
+    font-size: 25px;
+}
+
 .right {
     float: right;
     height: 100%;
+}
+
+.main {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h1 {
+    font-size: 50px;
 }
 
 .container {

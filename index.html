@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="nav">
+    <div class="nav" id="nav">
         <ul class="left">
             <li class="navtitle"><a href="https://bluelock.org/" style="padding-right: 3px;">Bluelock Org</a></li>
         </ul>
@@ -22,8 +22,8 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </div>
-    <div class="container">
-        <h1>Unmonitored Life</h1>
+    <div class="main">
+        <h1>You deserve an Unmonitored Life</h1>
     </div>
     <div>
         <h2>Messaging apps reimagined</h2>
@@ -48,6 +48,20 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction()
+        {
+            if ( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 )
+            {
+                document.getElementById( "nav" ).classList.add( "small" )
+            } else
+            {
+                document.getElementById( "nav" ).classList.remove( "small" )
+            }
+        }
+    </script>
 </body>
 
 </html>
