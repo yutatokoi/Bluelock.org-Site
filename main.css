@@ -28,6 +28,7 @@ body {
     color: #eeeeee;
     text-align: center;
     width: 100vw;
+    margin-bottom: 20px;
 }
 
 a {
@@ -45,6 +46,7 @@ a:visited {
 a:hover {
     text-decoration: none;
     color: inherit;
+    filter: grayscale(30%);
 }
 
 a:active {
@@ -164,6 +166,144 @@ a:active {
     text-align: center;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footercontainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.links a {
+    margin: 10px;
+}
+
+.socials div {
+    width: 36px;
+    padding: auto;
+    margin: 5px;
+}
+
 .socials img {
     height: 24px;
+}
+
+@media only screen and (max-width: 950px) {
+    .nav {}
+
+    .footercontainer div {
+        margin: 8px;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+    }
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        border-radius: 1.5px;
+        transform-origin: 100% 50%;
+    }
+
+    .topline {
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .open .topline {
+        transform: rotate(-45deg) translate(0, -1.3px);
+        transition: all 0.5s ease-out;
+    }
+
+    .middleline {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+    }
+
+    .open .middleline {
+        opacity: 0;
+        transition: all 0.5s ease-out;
+    }
+
+    .bottomline {
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .open .bottomline {
+        transform: rotate(45deg) translate(0, 1.3px);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .right {
+        z-index: -1;
+        opacity: 0;
+        position: fixed;
+        height: 40%;
+        width: 80%;
+        flex-direction: column;
+        background-color: rgba(50, 50, 50, 0.99);
+        margin-top: 81px;
+        margin-right: 10%;
+        margin-left: 10%;
+        transition: all 0.5s ease-out;
+        border-radius: 20px;
+    }
+
+    .nav .open {
+        z-index: 2;
+        opacity: 1;
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .right li {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .nav .right .nationsnav {
+        transform: translate(0, -81px);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .open .nationsnav {
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .right .companiesnav {
+        transform: translate(0, -142px);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .open .companiesnav {
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .right .communitiesnav {
+        transform: translate(0, -203px);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .open .communitiesnav {
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .nav .hamburger {
+        display: block;
+    }
 }

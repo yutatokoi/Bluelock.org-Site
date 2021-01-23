@@ -16,6 +16,11 @@
         <ul class="left">
             <li class="navtitle"><a href="https://bluelock.org/" style="padding-right: 3px;">Bluelock Org</a></li>
         </ul>
+        <div class="hamburger">
+            <div class="line topline"></div>
+            <div class="line middleline"></div>
+            <div class="line bottomline"></div>
+        </div>
         <ul class="right">
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -30,9 +35,12 @@
         <p>No ads. Free to use. Uncompromised utility. Above all, unrivaled privacy for all.</p>
     </div>
     <footer>
-        <div class="footercontainer">
-            <a href="https://bluelock.org">
-                Bluelock Org
+        <div class="footercontainer links">
+            <a href="https://bluelock.org/privacy">
+                Privacy Policy
+            </a>
+            <a href="https://bluelock.org/terms">
+                Terms of Use
             </a>
         </div>
         <div class="footercontainer socials">
@@ -46,12 +54,29 @@
                     <img src="./assets/socials/yt.png">
                 </a>
             </div>
+            <div>
+                <a href="https://github.com/bluelockorg" target="_blank">
+                    <img src="./assets/socials/github.png">
+                </a>
+            </div>
+        </div>
+        <div class="footercontainer">
+            <p>Copyright © 2021 Bluelock Org</p> 
         </div>
     </footer>
     <script>
-        window.onscroll = function () { scrollFunction() };
+        const hamburger = document.querySelector( ".hamburger" );
+        const nav = document.querySelector( ".nav .right" );
 
-        function scrollFunction()
+        hamburger.addEventListener( "click", () =>
+        {
+            nav.classList.toggle( "open" );
+            hamburger.classList.toggle( "open" );
+        } )
+
+        window.onscroll = function () { navFunc() };
+
+        function navFunc()
         {
             if ( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 )
             {
