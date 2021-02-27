@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="official website of Bluelock.org">
-        <title>Bluelock.org Website</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-            <hr>
-            <h1>Bluelock Org</h1>
-        </header>
-            <h2>Contact</h2>
-                <h4>Email: help@bluelock.org</h4>
-        <footer>
-            <h3>Bluelock Org</h3>
-            <ul>
-                <li>
-                    <a href="https://twitter.com/BlueLockOrg" target="_blank">
-                        <img src="./assets/twitter-logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/channel/UCBBH71MCMyKjL-f0XYgtAxg" target="_blank">
-                        <img src="./assets/youtube-logo.png">
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./assets/images/logo.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="Unmonitored Life - Bluelock Org">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Bluelock Org</title>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <ul class="left">
+            <li class="navtitle"><a href="https://bluelock.org/" style="padding-right: 3px;">Bluelock Org</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line topline"></div>
+            <div class="line middleline"></div>
+            <div class="line bottomline"></div>
+        </div>
+        <ul class="right">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="main-contact">
+        <h1>Contacts</h1>
+        <h3>Email: help@bluelock.org</h3>
+    </div>
+    <div>
+        <h2>Messaging apps reimagined</h2>
+        <p>No ads. Free to use. Uncompromised utility. Above all, unrivaled privacy for all.</p>
+    </div>
+    <footer>
+        <div class="footercontainer links">
+            <a href="https://bluelock.org/privacy">
+                Privacy Policy
+            </a>
+            <a href="https://bluelock.org/terms">
+                Terms of Use
+            </a>
+        </div>
+        <div class="footercontainer socials">
+            <div>
+                <a href="https://twitter.com/bluelockorg" target="_blank">
+                    <img src="./assets/socials/twitter.png">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/channel/UCBBH71MCMyKjL-f0XYgtAxg" target="_blank">
+                    <img src="./assets/socials/yt.png">
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/bluelockorg" target="_blank">
+                    <img src="./assets/socials/github.png">
+                </a>
+            </div>
+        </div>
+        <div class="footercontainer">
+            <p>Copyright &#169; 2021 Bluelock Org</p> 
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector( ".hamburger" );
+        const nav = document.querySelector( ".nav .right" );
+
+        hamburger.addEventListener( "click", () =>
+        {
+            nav.classList.toggle( "open" );
+            hamburger.classList.toggle( "open" );
+        } )
+
+        window.onscroll = function () { navFunc() };
+
+        function navFunc()
+        {
+            if ( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 )
+            {
+                document.getElementById( "nav" ).classList.add( "small" )
+            } else
+            {
+                document.getElementById( "nav" ).classList.remove( "small" )
+            }
+        }
+    </script>
+</body>
 </html>

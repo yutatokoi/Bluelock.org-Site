@@ -162,6 +162,42 @@ a:active {
     font-size: 50px;
 }
 
+.main-contact {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    flex-flow:column wrap;
+    justify-content: center;
+}
+
+.main-contact h1 {
+    font-size: 50px;
+}
+
+.main-about {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    flex-flow:column wrap;
+    justify-content: center;
+}
+
+.main-about h1 {
+    font-size: 50px;
+}
+
+.main-services {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    flex-flow:column wrap;
+    justify-content: center;
+}
+
+.main-services h1 {
+    font-size: 50px;
+}
+
 .container {
     text-align: center;
 }
